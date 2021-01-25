@@ -12,6 +12,10 @@ spec:
   replicas: 1
   template:
     spec:
+      volumes:
+      - name: tmp
+        hostPath:
+          path: /tmp
       hostPID: true
       hostIPC: true
       hostNetwork: true
