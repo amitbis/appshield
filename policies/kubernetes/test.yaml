@@ -12,6 +12,9 @@ spec:
   replicas: 1
   template:
     spec:
+      securityContext:
+        seLinuxOptions:
+          level: "s1:s2"
       volumes:
       - name: tmp
         hostPath:
